@@ -13,7 +13,7 @@ soup = BeautifulSoup(response.text, 'html.parser')
 
 #aside = soup.find('div', class_="side_categories")
 #categories = aside.find('ul').find('li').find('ul')
-#with open('liens.html', 'w', encoding='utf-8') as file:  # Ouvrir le fichier UNE SEULE FOIS
+#with open('pages/liens.html', 'w', encoding='utf-8') as file:  # Ouvrir le fichier UNE SEULE FOIS
 #    for category in categories.children:
 #        if category.name == 'li':
 #            href = category.a['href'].strip('/')
@@ -24,13 +24,13 @@ soup = BeautifulSoup(response.text, 'html.parser')
 
 
 #image = soup.find('section').find_all('img')
-#with open('images.html', 'w', encoding='utf-8') as file:
+#with open('pages/images.html', 'w', encoding='utf-8') as file:
 #    for img in image:
 #        src = img['src'].strip('/')
 #        alt = img['alt'].strip()
 #        file.write(f"<img src='{src}' alt='{alt}'/>\n")
 
-#with open('index.html', 'r') as file:
+#with open('pages/index.html', 'r') as file:
 #    html = file.read()
 #soup = BeautifulSoup(html, 'html.parser')
 #images = soup.find('section').find_all('img')
