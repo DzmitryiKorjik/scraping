@@ -39,7 +39,7 @@ soup = BeautifulSoup(response.text, 'html.parser')
 
 
 articles = soup.find_all('article', class_='product_pod')
-with open('titre.html', 'w', encoding='utf-8') as file:
+with open('pages/titre.html', 'w', encoding='utf-8') as file:
     for article in articles:
         titre = article.find('h3').find('a')
         file.write(f"{titre.text.strip()}\n")
