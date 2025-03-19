@@ -1,7 +1,13 @@
-import f
+from os import write
+
 import requests
+from bs4 import BeautifulSoup
 
-respons = requests.get("https://www.google.com/")
+url = "https://books.toscrape.com/"
+response = requests.get(url)
 
-with open('index.html', 'w') as f:
-    f.write(respons.text)
+soup = BeautifulSoup(response.text, 'html.parser')
+# print(soup.prettify())
+
+with open('index.html', 'w', encoding='utf-8') as file:
+    file.write(soup.prettify())
